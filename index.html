@@ -1,367 +1,194 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Templario – Templates with Character</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- AOS CSS -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     :root {
       --sky-mist: #b6d7f2;
       --midnight-ink: #1e1e2f;
       --digital-blue: #4b9cd3;
-      --soft-lilac: #e2d9f3;
       --white-ice: #f9fbfd;
     }
-
     body {
       font-family: "Inter", sans-serif;
       background-color: var(--white-ice);
       color: var(--midnight-ink);
     }
-
     h1, h2, h3, h4, h5, h6 {
       font-family: "Poppins", sans-serif;
       font-weight: 700;
     }
-
-    .accent-text,
-    .tagline {
-      font-family: "Raleway", sans-serif;
-    }
-
-    .hero-video {
+    .hero {
       position: relative;
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      overflow: hidden;
     }
-
-    .bg-video {
+    .hero video {
       position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       object-fit: cover;
       z-index: 0;
     }
-
-    .overlay {
+    .hero .overlay {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
       z-index: 1;
     }
-
-    .hero-video .container {
+    .hero .content {
       position: relative;
       z-index: 2;
       color: white;
     }
-
-    .btn-primary {
-      background-color: var(--digital-blue);
-      border: none;
-    }
-
-    .btn-primary:hover {
-      background-color: #3b8bc4;
-    }
-
     .product-card {
       background: white;
       border-radius: 16px;
       padding: 20px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
-    .icon {
-      font-size: 2rem;
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     }
-
-    .footer-links a {
-      margin: 0 10px;
-      color: #ffffff;
-      text-decoration: none;
+    .btn-primary {
+      background-color: var(--digital-blue);
+      border: none;
     }
-
-    .footer-links a:hover {
-      text-decoration: underline;
+    .btn-primary:hover {
+      background-color: #3b8bc4;
     }
-
-    /* ⭐ Mobile-first text size adjustments */
-    h1 {
-      font-size: 2.2rem;
+    footer {
+      background-color: #1e1e2f;
+      color: white;
     }
-
-    @media (min-width: 768px) {
-      h1 {
-        font-size: 3.5rem;
-      }
-    }
-
-    .lead {
-      font-size: 1.1rem;
-    }
-
-    @media (min-width: 768px) {
-      .lead {
-        font-size: 1.25rem;
-      }
-    }
-
-    /* ⭐ Padding adjustments */
-    section {
-      padding: 2rem 1rem;
-    }
-
-    @media (min-width: 768px) {
-      section {
-        padding: 4rem 2rem;
-      }
-    }
-
-    /* ⭐ Better mobile spacing in footer */
-    footer .footer-links {
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      display: inline-block;
-      margin: 4px 8px;
-    }
-    /* Hover Animations */
-.product-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-.btn {
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.accordion-button {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.accordion-button:hover {
-  background-color: var(--sky-mist);
-  color: var(--midnight-ink);
-}
-
-.footer-links a {
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.footer-links a:hover {
-  transform: translateY(-2px);
-  color: var(--sky-mist);
-}
-.animated-button {
-  transition: all 0.3s ease;
-  box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
-}
-.animated-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-}
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
- <section class="hero position-relative vh-100 overflow-hidden">
+<!-- Botón de idioma -->
+<div class="container text-end py-2 px-3">
+  <button id="langToggle" class="btn btn-outline-secondary btn-sm">🌐 English</button>
+</div>
+
+<!-- HERO -->
+<section class="hero position-relative vh-100 overflow-hidden">
   <!-- Video de fondo -->
   <video autoplay muted loop playsinline class="w-100 h-100 object-fit-cover position-absolute top-0 start-0">
     <source src="/assets/14665427-hd_1920_1080_60fps.mp4" type="video/mp4">
     Tu navegador no soporta video HTML5.
   </video>
-
-  <!-- Overlay con gradiente -->
   <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%); z-index:1;"></div>
 
-
-  <!-- Contenido -->
   <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white position-relative" style="z-index:2;">
-     <!-- Marca -->
-    <h2 class="fw-bold mb-3" style="letter-spacing: 3px; font-size: 1.8rem; text-shadow: 1px 1px 5px rgba(0,0,0,0.8);">
-      TEMPLARIO
-    </h2>
-    <h1 class="display-3 fw-bold mb-3">Grow your online presence</h1>
-    <p class="lead mb-4">Ready-to-use designs with clean, customizable code</p>
-    <a href="template_ gallery.html" class="btn btn-lg btn-primary px-5 py-3 animated-button">Explore templates</a>
+    <h2 class="fw-bold mb-3 lang" data-es="TEMPLARIO" data-en="TEMPLARIO">TEMPLARIO</h2>
+    <h1 class="display-3 fw-bold mb-3 lang" data-es="Plantillas para tarjetas digitales, invitaciones y landing pages" data-en="Templates for digital business cards, invitations & landing pages">Plantillas para tarjetas digitales, invitaciones y landing pages</h1>
+    <p class="lead mb-4 lang" data-es="Diseños listos para usar con código limpio y editable" data-en="Ready-to-use designs with clean, customizable code">Diseños listos para usar con código limpio y editable</p>
+    <a href="template_ gallery.html" class="btn btn-lg btn-primary px-5 py-3 animated-button lang" data-es="Explorar plantillas" data-en="Explore templates">Explorar plantillas</a>
   </div>
 </section>
 
-  <!-- PRODUCTOS -->
-  <section id="products" class="bg-light">
-    <div class="container text-center">
-      <h2 class="mb-4">Our Tools</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="product-card">
-            <h3>Templanator</h3>
-            <p>Create landing pages fast and easily.</p>
-            <a href="templanator.html" class="btn btn-outline-primary">Try Templanator</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="product-card">
-            <h3>Cardminator</h3>
-            <p>Make stylish digital business cards.</p>
-            <a href="cardminater.html" class="btn btn-outline-primary">Try Cardminator</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="product-card">
-            <h3>Invitron</h3>
-            <p>Send stunning invites in seconds.</p>
-            <a href="invitron.html" class="btn btn-outline-primary">Try Invitron</a>
-          </div>
+<section id="products" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 lang" data-es="Plantillas Destacadas" data-en="Featured Templates">Featured Templates</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="product-card text-center">
+          <img src="assets/interpreter-preview.jpg" class="img-fluid rounded mb-3" alt="Interpreter Portfolio Preview">
+          <h5 class="lang" data-es="Portafolio de Intérprete" data-en="Interpreter Portfolio">Interpreter Portfolio</h5>
+          <p class="lang" data-es="Portafolio limpio y moderno para intérpretes, incluye CV editable." data-en="Clean and modern portfolio for interpreters, includes editable CV.">Clean and modern portfolio for interpreters, includes editable CV.</p>
+          <a href="https://interpreterportfolio.netlify.app" target="_blank" class="btn btn-outline-secondary btn-sm lang" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
+          <a href="https://clentebank.gumroad.com/l/xmqsc" target="_blank" class="btn btn-primary btn-sm lang" data-es="Comprar por $20" data-en="Buy for $20">Buy for $20</a>
         </div>
       </div>
     </div>
-  </section>
+    <div class="text-center mt-4">
+      <a href="templates.html" class="btn btn-outline-dark lang" data-es="Ver Todas las Plantillas" data-en="View All Templates">View All Templates</a>
+    </div>
+  </div>
+</section>
 
-  <!-- WHY -->
-  <section>
-    <div class="container text-center">
-      <h2 class="mb-4">Why Choose Templario?</h2>
-      <div class="row g-4">
-        <div class="col-md-4" data-aos="fade-up">
-          <div class="icon mb-2 text-primary"><i class="fas fa-bolt"></i></div>
-          <h4>Fast & Easy</h4>
-          <p>No code. No stress. Just copy, edit, and launch.</p>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="icon mb-2 text-primary"><i class="fas fa-paint-brush"></i></div>
-          <h4>Customizable</h4>
-          <p>Edit content and colors from Google Sheets.</p>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon mb-2 text-primary"><i class="fas fa-mobile-alt"></i></div>
-          <h4>Modern Design</h4>
-          <p>Clean, responsive templates for any screen.</p>
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-5 lang" data-es="Tarjetas Digitales" data-en="Digital Business Cards">Digital Business Cards</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="product-card text-center">
+          <img src="assets/card1.jpg" class="img-fluid rounded mb-3" alt="Business Card Preview">
+          <h5 class="lang" data-es="Tarjeta Freelancer" data-en="Freelancer Card">Freelancer Card</h5>
+          <p class="lang" data-es="Plantilla moderna y responsiva para tarjetas digitales de freelancers y profesionales." data-en="Modern, responsive digital card template for freelancers and pros.">Modern, responsive digital card template for freelancers and pros.</p>
+          <a href="#" class="btn btn-outline-secondary btn-sm lang" target="_blank" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
+          <a href="#" class="btn btn-primary btn-sm lang" target="_blank" data-es="Comprar Ahora" data-en="Buy Now">Buy Now</a>
         </div>
       </div>
     </div>
-  </section>
+    <div class="text-center mt-4">
+      <a href="business-cards.html" class="btn btn-outline-dark lang" data-es="Explorar Más Tarjetas" data-en="Explore More Business Cards">Explore More Business Cards</a>
+    </div>
+  </div>
+</section>
 
-  <!-- TESTIMONIOS -->
-  <section class="bg-light">
-    <div class="container">
-      <h2 class="text-center mb-5">What People Are Saying</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="product-card" data-aos="fade-up">
-            <p>"Launching my business was so easy. Highly recommend!"</p>
-            <strong>- Ana R.</strong>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="product-card" data-aos="fade-up">
-            <p>"I created my wedding invite in 5 minutes. Simple & beautiful."</p>
-            <strong>- Luis G.</strong>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="product-card" data-aos="fade-up">
-            <p>"Finally a stylish way to share my business card online!"</p>
-            <strong>- Maria L.</strong>
-          </div>
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 lang" data-es="Invitaciones Digitales" data-en="Digital Invitations">Digital Invitations</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="product-card text-center">
+          <img src="assets/invite1.jpg" class="img-fluid rounded mb-3" alt="Invitation Preview">
+          <h5 class="lang" data-es="Invitación de Boda" data-en="Wedding Invite">Wedding Invite</h5>
+          <p class="lang" data-es="Plantilla elegante y compartible para invitaciones de boda en línea." data-en="Elegant and shareable online wedding invitation template.">Elegant and shareable online wedding invitation template.</p>
+          <a href="#" class="btn btn-outline-secondary btn-sm lang" target="_blank" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
+          <a href="#" class="btn btn-primary btn-sm lang" target="_blank" data-es="Comprar Ahora" data-en="Buy Now">Buy Now</a>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- FAQ -->
-  <section>
-    <div class="container">
-      <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-      <div class="accordion" id="faqAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
-              Do I need to know how to code?
-            </button>
-          </h2>
-          <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">No! Everything is editable via Google Sheets.</div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
-              Can I customize colors and images?
-            </button>
-          </h2>
-          <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">Yes, all visual content is customizable.</div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
-              Is there a free trial?
-            </button>
-          </h2>
-          <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">Yes, free starter templates are available.</div>
-          </div>
-        </div>
-      </div>
+    <div class="text-center mt-4">
+      <a href="invitations.html" class="btn btn-outline-dark lang" data-es="Ver Todas las Invitaciones" data-en="Browse All Invitations">Browse All Invitations</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="py-4 bg-dark text-light text-center">
-    <div class="container">
-      <p class="mb-2">Templario &copy; 2025</p>
-      <div class="footer-links mb-2 d-flex justify-content-center flex-wrap">
-        <a href="#">Contact</a>
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
-      </div>
-      <div>
-        <a href="#" class="me-3 text-light">LinkedIn</a>
-        <a href="#" class="me-3 text-light">Instagram</a>
-        <a href="#" class="text-light">Twitter</a>
-      </div>
+<footer class="py-4 text-center bg-dark text-white">
+  <div class="container">
+    <p class="lang" data-es="Templario © 2025. Todos los derechos reservados." data-en="Templario &copy; 2025. All rights reserved.">Templario &copy; 2025. All rights reserved.</p>
+    <div>
+      <a href="#" class="text-white mx-2 lang" data-es="Instagram" data-en="Instagram">Instagram</a>
+      <a href="#" class="text-white mx-2 lang" data-es="Twitter" data-en="Twitter">Twitter</a>
+      <a href="#" class="text-white mx-2 lang" data-es="Contacto" data-en="Contact">Contact</a>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+<script>
+  const langToggle = document.getElementById('langToggle');
+  const langElements = document.querySelectorAll('.lang');
+  let currentLang = 'es';
+
+  langToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    langToggle.textContent = currentLang === 'es' ? '🌐 English' : '🌐 Español';
+    langElements.forEach(el => {
+      const text = el.getAttribute(`data-${currentLang}`);
+      if (text) el.textContent = text;
+    });
+    document.documentElement.lang = currentLang;
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
 </body>
 </html>
