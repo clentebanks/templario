@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Event Invitation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8e6c88;
+            --secondary-color: #d4b9b0;
+            --accent-color: #f7e1d7;
+            --dark-color: #3d3d3d;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            z-index: 2;
+        }
+        
+        .divider {
+            height: 3px;
+            width: 100px;
+            background-color: var(--secondary-color);
+            margin: 20px auto;
+        }
+        
+        .date-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+        
+        .details-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .details-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .details-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .countdown-item {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 0 5px;
+        }
+        
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .rsvp-form {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 12px 30px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #7a5b74;
+            border-color: #7a5b74;
+        }
+        
+        .map-container {
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 30px 0;
+        }
+        
+        .confirmation-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 80vh;
+            }
+            
+            .section {
+                padding: 50px 0;
+            }
+            
+            .countdown-item {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-content text-center">
+            <h1 class="display-3 fw-bold mb-4">Alex & Taylor</h1>
+            <div class="divider"></div>
+            <p class="lead mb-4">Invite you to celebrate their wedding</p>
+            <div class="date-badge">
+                <i class="fas fa-calendar-alt me-2"></i> June 15, 2024
+            </div>
+            <a href="#rsvp" class="btn btn-outline-light btn-lg px-5">RSVP Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Our Special Day</h2>
+                    <p class="lead">Join us as we celebrate our love and begin our journey together as husband and wife. We've chosen a beautiful vineyard as the backdrop for our special day, surrounded by family and friends.</p>
+                    <p>The ceremony will begin at 4:00 PM, followed by cocktails, dinner, and dancing under the stars.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="section bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Counting Down</h2>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Event Details</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="details-card text-center">
+                        <div class="details-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Location</h3>
+                        <p>Sunset Vineyards<br>123 Vineyard Lane<br>Napa Valley, CA 94558</p>
+                        <a href="#map" class="btn btn-outline-primary">View Map</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details-card text-center">
+                        <div class="details-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Schedule</h3>
+                        <p><strong>4:00 PM</strong> - Ceremony<br>
+                        <strong>5:00 PM</strong> - Cocktails<br>
+                        <strong>6:30 PM</strong> - Dinner<br>
+                        <strong>8:00 PM</strong> - Dancing</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details-card text-center">
+                        <div class="details-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <h3>Additional Info</h3>
+                        <p>Dress code: Semi-formal<br>
+                        Outdoor ceremony (weather permitting)<br>
+                        Valet parking available<br>
+                        Hotel block available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section bg-light" id="map">
+        <div class="container">
+            <h2 class="section-title text-center">Location</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.998370273017!2d-122.2868479243365!3d38.25155197181925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f5c5e6ae4d345%3A0x8a9f81a6f6609c37!2sNapa%20Valley!5e0!3m2!1sen!2sus!4v1689876543210!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="section" id="rsvp">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="section-title text-center">RSVP</h2>
+                    <p class="text-center mb-5">Kindly respond by May 1, 2024</p>
+                    
+                    <div class="rsvp-form">
+                        <form id="rsvpForm">
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="guests" class="form-label">Number of Guests</label>
+                                <select class="form-select" id="guests" required>
+                                    <option value="" selected disabled>Select number</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5+</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Will you be attending?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="attending" id="attendingYes" value="yes" checked>
+                                    <label class="form-check-label" for="attendingYes">
+                                        Yes, I'll be there!
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="attending" id="attendingNo" value="no">
+                                    <label class="form-check-label" for="attendingNo">
+                                        Regretfully decline
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Message (Optional)</label>
+                                <textarea class="form-control" id="message" rows="3"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Submit RSVP</button>
+                            </div>
+                        </form>
+                        
+                        <div class="confirmation-message" id="confirmationMessage">
+                            <h4>Thank you for your RSVP!</h4>
+                            <p>We've received your response and look forward to celebrating with you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Our Story</h2>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" class="img-fluid rounded" alt="Couple photo 1">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" class="img-fluid rounded" alt="Couple photo 2">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded" alt="Couple photo 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <h3 class="mb-4">Alex & Taylor</h3>
+            <p>June 15, 2024</p>
+            <div class="social-icons mt-4">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <p class="mt-4 mb-0">© 2023 Wedding Invitation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const eventDate = new Date('June 15, 2024 16:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+            
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById('days').innerHTML = '00';
+                document.getElementById('hours').innerHTML = '00';
+                document.getElementById('minutes').innerHTML = '00';
+                document.getElementById('seconds').innerHTML = '00';
+            }
+        }
+        
+        const countdownTimer = setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // RSVP Form Handling
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send this data to a server
+            // For this demo, we'll just show a confirmation message
+            
+            document.getElementById('confirmationMessage').style.display = 'block';
+            document.getElementById('rsvpForm').reset();
+            
+            // Scroll to confirmation message
+            document.getElementById('confirmationMessage').scrollIntoView({
+                behavior: 'smooth'
+            });
+            
+            // Hide the form after submission
+            setTimeout(function() {
+                document.getElementById('rsvpForm').style.display = 'none';
+            }, 500);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
