@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sky-mist: #b6d7f2;
+      --midnight-ink: #1e1e2f;
+      --digital-blue: #4b9cd3;
+      --white-ice: #f9fbfd;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: var(--white-ice);
+      color: var(--midnight-ink);
+      min-height: 100vh;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+    }
+
+    .center-box {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .btn-custom {
+      background-color: var(--digital-blue);
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 9999px;
+      margin-top: 1.5rem;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+
+    .btn-custom:hover {
+      background-color: var(--sky-mist);
+      color: var(--midnight-ink);
+    }
+  </style>
+</head>
+<body>
+  <div class="center-box">
+    <h1 id="pageTitle">Coming Soon</h1>
+    <p class="lead fs-5" id="pageDescription">Something great is on its way!</p>
+    <button class="btn btn-custom" onclick="history.back()">← Go Back</button>
+  </div>
+
+  <script>
+    const path = window.location.pathname.toLowerCase();
+    const title = document.getElementById('pageTitle');
+    const desc = document.getElementById('pageDescription');
+
+    if (path.includes('invitations')) {
+      title.textContent = "Browse All Invitations";
+      desc.textContent = "Beautiful wedding invitation templates coming soon!";
+    } else if (path.includes('business-cards')) {
+      title.textContent = "Explore More Business Cards";
+      desc.textContent = "Stylish business card templates are on the way!";
+    } else if (path.includes('templates')) {
+      title.textContent = "View All Templates";
+      desc.textContent = "Our full template collection will be available shortly!";
+    }
+  </script>
+</body>
+</html>

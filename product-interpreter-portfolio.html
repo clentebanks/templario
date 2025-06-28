@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio de Intérprete Profesional – Templario</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+    .product-header {
+      background: linear-gradient(to right, #007bff, #00aaff);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .product-images img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .buy-button {
+      font-size: 1.2rem;
+    }
+    .lang-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Idioma -->
+<button class="btn btn-sm btn-outline-dark lang-toggle" id="langToggle">🌐 English</button>
+
+<!-- Encabezado -->
+<section class="product-header">
+  <div class="container">
+    <h1 class="display-5 lang" data-es="Plantilla de Portafolio Profesional para Intérpretes" data-en="Professional Interpreter Portfolio Template">Plantilla de Portafolio Profesional para Intérpretes</h1>
+    <p class="lead lang" data-es="Incluye CV editable, diseño moderno, y sitio web listo para usar" data-en="Includes editable CV, modern design, and ready-to-use website.">Incluye CV editable, diseño moderno, y sitio web listo para usar</p>
+    <a href="https://clentebank.gumroad.com/l/xmqsc" target="_blank" class="btn btn-light btn-lg buy-button lang" data-es="🛒 Comprar por $20" data-en="🛒 Buy for $20">🛒 Comprar por $20</a>
+  </div>
+</section>
+
+<main class="container my-5">
+
+  <!-- Botones de navegación -->
+  <div class="mb-4 text-center">
+    <a href="index.html" class="btn btn-outline-secondary me-2 lang" data-es="🏠 Volver al inicio" data-en="🏠 Back to Home">🏠 Volver al inicio</a>
+    <a href="templates.html" class="btn btn-outline-secondary lang" data-es="📂 Ver más plantillas" data-en="📂 View more templates">📂 Ver más plantillas</a>
+  </div>
+
+  <!-- Contenido -->
+  <div class="row g-4">
+    <div class="col-md-6 product-images">
+      <img src="/assets/templates/interpreter1.jpg" alt="Preview 1" />
+      <img src="/assets/templates/interpreter2.jpg" alt="Preview 2" />
+    </div>
+    <div class="col-md-6">
+      <h3 class="lang" data-es="Ideal para intérpretes, traductores y freelancers" data-en="Perfect for interpreters, translators, and freelancers">Ideal para intérpretes, traductores y freelancers</h3>
+      <ul>
+        <li class="lang" data-es="✔️ Página web responsive y moderna" data-en="✔️ Responsive modern website">✔️ Página web responsive y moderna</li>
+        <li class="lang" data-es="✔️ Incluye CV editable y descargable" data-en="✔️ Includes editable and downloadable CV">✔️ Incluye CV editable y descargable</li>
+        <li class="lang" data-es="✔️ Personalizable con tu información" data-en="✔️ Easy to customize with your info">✔️ Personalizable con tu información</li>
+        <li class="lang" data-es="✔️ Compatible con Netlify, GitHub Pages, etc." data-en="✔️ Works with Netlify, GitHub Pages, etc.">✔️ Compatible con Netlify, GitHub Pages, etc.</li>
+        <li class="lang" data-es="✔️ Archivos HTML, CSS, JS incluidos" data-en="✔️ Includes all HTML, CSS, JS files">✔️ Archivos HTML, CSS, JS incluidos</li>
+      </ul>
+
+      <a href="https://interpreterportfolio.netlify.app/" target="_blank" class="btn btn-outline-primary mt-3 lang" data-es="🔗 Ver demo en vivo" data-en="🔗 View live demo">🔗 Ver demo en vivo</a>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <p class="lang" data-es="Templario &copy; 2025" data-en="Templario &copy; 2025">Templario &copy; 2025</p>
+</footer>
+
+<!-- Scripts -->
+<script>
+  const langToggle = document.getElementById('langToggle');
+  const langElements = document.querySelectorAll('.lang');
+  let currentLang = 'es';
+
+  function updateLang(lang) {
+    langElements.forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+    document.documentElement.lang = lang;
+    langToggle.textContent = lang === 'es' ? '🌐 English' : '🌐 Español';
+    currentLang = lang;
+  }
+
+  langToggle.addEventListener('click', () => {
+    updateLang(currentLang === 'es' ? 'en' : 'es');
+  });
+
+  updateLang(currentLang);
+</script>
+
+</body>
+</html>
