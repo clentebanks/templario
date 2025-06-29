@@ -4,27 +4,24 @@
 <head>
   <!-- Essential Meta Tags -->
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Templario – Templates with Character</title>
-<meta name="description" content="Templario – Modern Bootstrap templates for landing pages, invitations, digital business cards." />
-<meta name="author" content="Templario" />
-<meta name="robots" content="index, follow" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="language" content="en" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">Templario | Free & Premium HTML Templates for Landing Pages, Cards & Invites</title>
+  <meta id="metaDescription" name="description" content="Templario offers modern Bootstrap-based templates for landing pages, digital business cards, and elegant invitations. Responsive, clean, and ready to customize. Download free or premium versions." />
+  <meta id="metaKeywords" name="keywords" content="landing page templates, HTML templates, free templates, premium templates, bootstrap templates, digital invitations, business cards, wedding templates, Templario" />
+  <meta name="author" content="Templario" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="language" content="es" />
+  <link rel="canonical" href="https://www.templario.shop/" />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.templario.shop/" /> <!-- Replace with your real URL -->
-<meta property="og:title" content="Templario – Templates with Character" />
-<meta property="og:description" content="Modern Bootstrap templates for landing pages, invitations, and digital business cards." />
-<meta property="og:image" content="https://templario.shop/assets/image1.png" /> <!-- Replace with your actual image URL -->
+  <!-- Open Graph / Facebook -->
+  <meta id="ogTitle" property="og:title" content="Templario | HTML Templates for Landing Pages, Cards & Invites" />
+  <meta id="ogDescription" property="og:description" content="Download modern templates for landing pages, wedding invites, and business cards. Free and premium versions available. Powered by Bootstrap, easy to edit." />
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:url" content="https://www.templario.shop/" />
-<meta name="twitter:title" content="Templario – Templates with Character" />
-<meta name="twitter:description" content="Modern Bootstrap templates for landing pages, invitations, and digital business cards." />
-<meta name="twitter:image" content="https://templario.shop/assets/image1.png" />
+  <!-- Twitter -->
+  <meta id="twitterTitle" name="twitter:title" content="Templario | HTML Templates with Style and Simplicity" />
+  <meta id="twitterDescription" name="twitter:description" content="Landing pages, invitations, and digital business card templates. Responsive and customizable for developers, designers, and event planners." />
+
 
 <!-- Favicon -->
 <link rel="icon" href="/favicon_io/favicon-32x32.png" type="image/x-icon" />
@@ -124,6 +121,41 @@
       color: white;
     }
   </style>
+
+   <!-- Dynamic Meta Language Script -->
+  <script>
+    const metaLangContent = {
+      es: {
+        title: "Templario | Plantillas HTML Gratis y Premium para Landing Pages, Invitaciones y Tarjetas Digitales",
+        description: "Templario ofrece plantillas modernas y responsivas con Bootstrap para landing pages, tarjetas de presentación digitales e invitaciones. Código limpio, listo para personalizar y usar.",
+        keywords: "plantillas HTML, plantillas landing page, plantillas digitales, plantillas para bodas, tarjetas de presentación digitales, invitaciones online, Templario, plantillas Bootstrap",
+        ogTitle: "Templario | Plantillas HTML para Landing Pages, Tarjetas e Invitaciones",
+        ogDescription: "Descarga plantillas modernas para landing pages, invitaciones de boda y tarjetas profesionales. Versiones gratis y premium disponibles. Hechas con Bootstrap.",
+        twitterTitle: "Templario | Plantillas HTML con Estilo y Simplicidad",
+        twitterDescription: "Landing pages, invitaciones y tarjetas digitales. Plantillas responsivas y personalizables para desarrolladores, diseñadores y organizadores de eventos."
+      },
+      en: {
+        title: "Templario | Free & Premium HTML Templates for Landing Pages, Cards & Invites",
+        description: "Templario offers modern Bootstrap-based templates for landing pages, digital business cards, and elegant invitations. Responsive, clean, and ready to customize. Download free or premium versions.",
+        keywords: "landing page templates, HTML templates, free templates, premium templates, bootstrap templates, digital invitations, business cards, wedding templates, Templario",
+        ogTitle: "Templario | HTML Templates for Landing Pages, Cards & Invites",
+        ogDescription: "Download modern templates for landing pages, wedding invites, and business cards. Free and premium versions available. Powered by Bootstrap, easy to edit.",
+        twitterTitle: "Templario | HTML Templates with Style and Simplicity",
+        twitterDescription: "Landing pages, invitations, and digital business card templates. Responsive and customizable for developers, designers, and event planners."
+      }
+    };
+
+    function updateMeta(lang) {
+      document.title = metaLangContent[lang].title;
+      document.getElementById('metaDescription').setAttribute('content', metaLangContent[lang].description);
+      document.getElementById('metaKeywords').setAttribute('content', metaLangContent[lang].keywords);
+      document.getElementById('ogTitle').setAttribute('content', metaLangContent[lang].ogTitle);
+      document.getElementById('ogDescription').setAttribute('content', metaLangContent[lang].ogDescription);
+      document.getElementById('twitterTitle').setAttribute('content', metaLangContent[lang].twitterTitle);
+      document.getElementById('twitterDescription').setAttribute('content', metaLangContent[lang].twitterDescription);
+    }
+  </script>
+
 </head>
 <body>
 
@@ -368,28 +400,75 @@
 </footer>
 
 <script>
-  const langToggle = document.getElementById('langToggle');
-  const langElements = document.querySelectorAll('.lang');
-  let currentLang = 'es';
+const langToggle = document.getElementById('langToggle');
+const langElements = document.querySelectorAll('.lang');
+let currentLang = 'es';
 
-  langToggle.addEventListener('click', () => {
-    currentLang = currentLang === 'es' ? 'en' : 'es';
-    langToggle.textContent = currentLang === 'es' ? '🌐 English' : '🌐 Español';
-    langElements.forEach(el => {
-      const text = el.getAttribute(`data-${currentLang}`);
-      if (text) el.textContent = text;
-    });
-    document.documentElement.lang = currentLang;
+langToggle.addEventListener('click', () => {
+  currentLang = currentLang === 'es' ? 'en' : 'es';
+  langToggle.textContent = currentLang === 'es' ? '🌐 English' : '🌐 Español';
+  langElements.forEach(el => {
+    const text = el.getAttribute(`data-${currentLang}`);
+    if (text) el.textContent = text;
   });
-  if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').then(reg => {
-      console.log('Service Worker registered.', reg);
-    }).catch(err => {
-      console.error('Service Worker registration failed:', err);
-    });
-  });
+  document.documentElement.lang = currentLang;
+  updateMeta(currentLang); // ✅ Update meta tags when toggling
+});
+
+// ✅ Update meta tags (title, description, og:title, etc.)
+function updateMeta(lang) {
+  const metaData = {
+    es: {
+      title: 'Templario | Plantillas HTML Gratis y Premium para Landings, Tarjetas e Invitaciones',
+      description: 'Templario ofrece plantillas modernas en Bootstrap para landing pages, tarjetas digitales e invitaciones elegantes. Responsivas, limpias y listas para personalizar.',
+      keywords: 'plantillas html, plantillas gratis, invitaciones digitales, tarjetas de presentación, Templario, plantillas premium',
+      ogTitle: 'Templario | Plantillas HTML Profesionales',
+      ogDescription: 'Descarga plantillas modernas para landings, bodas y tarjetas profesionales. Gratis y premium.',
+      twitterTitle: 'Templario | Plantillas HTML Responsivas',
+      twitterDescription: 'Invitaciones digitales, landings y tarjetas modernas. Código limpio y personalizable.',
+    },
+    en: {
+      title: 'Templario | Free & Premium HTML Templates for Landing Pages, Cards & Invites',
+      description: 'Templario offers modern Bootstrap-based templates for landing pages, digital business cards, and elegant invitations. Responsive, clean, and ready to customize.',
+      keywords: 'landing page templates, HTML templates, free templates, premium templates, bootstrap templates, digital invitations, business cards, wedding templates, Templario',
+      ogTitle: 'Templario | HTML Templates for Landing Pages, Cards & Invites',
+      ogDescription: 'Download modern templates for landing pages, wedding invites, and business cards. Free and premium versions available. Powered by Bootstrap, easy to edit.',
+      twitterTitle: 'Templario | HTML Templates with Style and Simplicity',
+      twitterDescription: 'Landing pages, invitations, and digital business card templates. Responsive and customizable for developers, designers, and event planners.',
+    }
+  };
+
+  const content = metaData[lang];
+
+  // Update <title>
+  document.title = content.title;
+
+  // Update meta description
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', content.description);
+
+  // Update keywords
+  const metaKeywords = document.querySelector('meta[name="keywords"]');
+  if (metaKeywords) metaKeywords.setAttribute('content', content.keywords);
+
+  // Open Graph
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute('content', content.ogTitle);
+
+  const ogDescription = document.querySelector('meta[property="og:description"]');
+  if (ogDescription) ogDescription.setAttribute('content', content.ogDescription);
+
+  // Twitter
+  const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+  if (twitterTitle) twitterTitle.setAttribute('content', content.twitterTitle);
+
+  const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+  if (twitterDescription) twitterDescription.setAttribute('content', content.twitterDescription);
 }
+
+// ✅ Call it on page load
+updateMeta(currentLang);
+
 //sw
 const CACHE_NAME = 'templario-cache-v1';
 const urlsToCache = [
@@ -461,6 +540,7 @@ const btnScrollTop = document.getElementById('btnScrollTop');
   btnScrollTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
