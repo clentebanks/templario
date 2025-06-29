@@ -121,26 +121,33 @@
 <body>
 
 <!-- Botón de idioma -->
-<div class="container text-end py-2 px-3">
-  <button id="langToggle" class="btn btn-outline-secondary btn-sm">🌐 English</button>
+<div style="position: fixed; top: 15px; right: 15px; z-index: 1000; background-color: rgba(255,255,255,0.85); border-radius: 6px; padding: 6px;">
+  <button id="langToggle" class="btn btn-sm btn-dark">🌐 English</button>
 </div>
+
 
 <!-- HERO -->
 <section class="hero position-relative vh-100 overflow-hidden">
   <!-- Video de fondo -->
   <video autoplay muted loop playsinline class="w-100 h-100 object-fit-cover position-absolute top-0 start-0">
-    <source src="/assets/14665427-hd_1920_1080_60fps.mp4" type="video/mp4">
+    <source src="/assets/14665427-hd_1920_1080_60fps.mp4" type="video/mp4" />
     Tu navegador no soporta video HTML5.
   </video>
+  
   <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%); z-index:1;"></div>
 
   <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white position-relative" style="z-index:2;">
     <h2 class="fw-bold mb-3 lang" data-es="TEMPLARIO" data-en="TEMPLARIO">TEMPLARIO</h2>
-    <h1 class="display-3 fw-bold mb-3 lang" data-es="Plantillas para tarjetas digitales, invitaciones y landing pages" data-en="Templates for digital business cards, invitations & landing pages">Plantillas para tarjetas digitales, invitaciones y landing pages</h1>
-    <p class="lead mb-4 lang" data-es="Diseños listos para usar con código limpio y editable" data-en="Ready-to-use designs with clean, customizable code">Diseños listos para usar con código limpio y editable</p>
+    <h1 class="display-3 fw-bold mb-3 lang" data-es="Plantillas para tarjetas digitales, invitaciones y landing pages" data-en="Templates for digital business cards, invitations & landing pages">
+      Plantillas para tarjetas digitales, invitaciones y landing pages
+    </h1>
+    <p class="lead mb-4 lang" data-es="Diseños listos para usar con código limpio y editable" data-en="Ready-to-use designs with clean, customizable code">
+      Diseños listos para usar con código limpio y editable
+    </p>
     <a href="#products" class="btn btn-lg btn-primary px-5 py-3 animated-button lang" data-es="Explorar plantillas" data-en="Explore templates">Explorar plantillas</a>
   </div>
 </section>
+
 
 <section id="products" class="py-5 bg-light">
   <div class="container">
