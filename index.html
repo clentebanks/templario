@@ -319,6 +319,26 @@
   </div>
 </section>
 
+<!--boton volver arriba-->
+<!-- Botón Volver Arriba -->
+<button id="btnScrollTop" title="Volver arriba" 
+        style="
+          position: fixed;
+          bottom: 40px;
+          right: 40px;
+          display: none;
+          background-color: var(--digital-blue);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
+          cursor: pointer;
+          z-index: 1000;
+        ">
+  ↑
+</button>
 
 <!-- Footer -->
 
@@ -413,6 +433,20 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     alert('Por favor, completa todos los campos y confirma que no eres un robot.');
   }
 });
+//boton volver arriba
+const btnScrollTop = document.getElementById('btnScrollTop');
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btnScrollTop.style.display = "block";
+    } else {
+      btnScrollTop.style.display = "none";
+    }
+  };
+
+  btnScrollTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
