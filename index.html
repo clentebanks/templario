@@ -1,13 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <!-- Essential Meta Tags -->
-<meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="pageTitle">Templario | Free & Premium HTML Templates for Landing Pages, Cards & Invites</title>
-  <meta id="metaDescription" name="description" content="Templario offers modern Bootstrap-based templates for landing pages, digital business cards, and elegant invitations. Responsive, clean, and ready to customize. Download free or premium versions." />
-  <meta id="metaKeywords" name="keywords" content="landing page templates, HTML templates, free templates, premium templates, bootstrap templates, digital invitations, business cards, wedding templates, Templario" />
+  <title id="pageTitle">
+    Templario | Free & Premium HTML Templates for Landing Pages, Cards &
+    Invites
+  </title>
+  <meta id="metaDescription" name="description"
+    content="Templario offers modern Bootstrap-based templates for landing pages, digital business cards, and elegant invitations. Responsive, clean, and ready to customize. Download free or premium versions." />
+  <meta id="metaKeywords" name="keywords"
+    content="landing page templates, HTML templates, free templates, premium templates, bootstrap templates, digital invitations, business cards, wedding templates, Templario" />
   <meta name="author" content="Templario" />
   <meta name="robots" content="index, follow" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,37 +21,39 @@
 
   <!-- Open Graph / Facebook -->
   <meta id="ogTitle" property="og:title" content="Templario | HTML Templates for Landing Pages, Cards & Invites" />
-  <meta id="ogDescription" property="og:description" content="Download modern templates for landing pages, wedding invites, and business cards. Free and premium versions available. Powered by Bootstrap, easy to edit." />
+  <meta id="ogDescription" property="og:description"
+    content="Download modern templates for landing pages, wedding invites, and business cards. Free and premium versions available. Powered by Bootstrap, easy to edit." />
 
   <!-- Twitter -->
   <meta id="twitterTitle" name="twitter:title" content="Templario | HTML Templates with Style and Simplicity" />
-  <meta id="twitterDescription" name="twitter:description" content="Landing pages, invitations, and digital business card templates. Responsive and customizable for developers, designers, and event planners." />
+  <meta id="twitterDescription" name="twitter:description"
+    content="Landing pages, invitations, and digital business card templates. Responsive and customizable for developers, designers, and event planners." />
 
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon_io/favicon-32x32.png" type="image/x-icon" />
 
-<!-- Favicon -->
-<link rel="icon" href="/favicon_io/favicon-32x32.png" type="image/x-icon" />
+  <!-- Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Manifest -->
+  <link rel="manifest" href="/manifest.json" />
 
-<!-- Stylesheets -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-<!-- Manifest -->
-<link rel="manifest" href="/manifest.json" />
+  <!-- Theme Color for Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#4b9cd3" />
 
-<!-- Theme Color for Chrome, Firefox OS and Opera -->
-<meta name="theme-color" content="#4b9cd3" />
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
 
-<!-- Apple Touch Icon -->
-<link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+  <!-- iOS Safari meta -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
-<!-- iOS Safari meta -->
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="default" />
-
-<!-- Microsoft Tiles -->
-<meta name="msapplication-TileColor" content="#4b9cd3" />
-<meta name="msapplication-TileImage" content="/icons/icon-192x192.png" />
+  <!-- Microsoft Tiles -->
+  <meta name="msapplication-TileColor" content="#4b9cd3" />
+  <meta name="msapplication-TileImage" content="/icons/icon-192x192.png" />
 
   <style>
     :root {
@@ -55,20 +62,29 @@
       --digital-blue: #4b9cd3;
       --white-ice: #f9fbfd;
     }
+
     body {
       font-family: "Inter", sans-serif;
       background-color: var(--white-ice);
       color: var(--midnight-ink);
     }
-    h1, h2, h3, h4, h5, h6 {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: "Poppins", sans-serif;
       font-weight: 700;
     }
+
     section h1,
     article h1,
     nav h1,
     aside h1 {
-      font-size: 2.5rem; /* Or use a class like .display-3 */
+      font-size: 2.5rem;
+      /* Or use a class like .display-3 */
     }
 
     .hero {
@@ -79,25 +95,33 @@
       justify-content: center;
       text-align: center;
     }
+
     .hero video {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       z-index: 0;
     }
+
     .hero .overlay {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-color: rgba(0, 0, 0, 0.5);
       z-index: 1;
     }
+
     .hero .content {
       position: relative;
       z-index: 2;
       color: white;
     }
+
     .product-card {
       background: white;
       border-radius: 16px;
@@ -105,446 +129,635 @@
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .product-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     }
+
     .btn-primary {
       background-color: var(--digital-blue);
       border: none;
     }
+
     .btn-primary:hover {
       background-color: #3b8bc4;
     }
+
     footer {
       background-color: #1e1e2f;
       color: white;
     }
   </style>
 
-   <!-- Dynamic Meta Language Script -->
+  <!-- Dynamic Meta Language Script -->
   <script>
     const metaLangContent = {
       es: {
-        title: "Templario | Plantillas HTML Gratis y Premium para Landing Pages, Invitaciones y Tarjetas Digitales",
-        description: "Templario ofrece plantillas modernas y responsivas con Bootstrap para landing pages, tarjetas de presentación digitales e invitaciones. Código limpio, listo para personalizar y usar.",
-        keywords: "plantillas HTML, plantillas landing page, plantillas digitales, plantillas para bodas, tarjetas de presentación digitales, invitaciones online, Templario, plantillas Bootstrap",
-        ogTitle: "Templario | Plantillas HTML para Landing Pages, Tarjetas e Invitaciones",
-        ogDescription: "Descarga plantillas modernas para landing pages, invitaciones de boda y tarjetas profesionales. Versiones gratis y premium disponibles. Hechas con Bootstrap.",
+        title:
+          "Templario | Plantillas HTML Gratis y Premium para Landing Pages, Invitaciones y Tarjetas Digitales",
+        description:
+          "Templario ofrece plantillas modernas y responsivas con Bootstrap para landing pages, tarjetas de presentación digitales e invitaciones. Código limpio, listo para personalizar y usar.",
+        keywords:
+          "plantillas HTML, plantillas landing page, plantillas digitales, plantillas para bodas, tarjetas de presentación digitales, invitaciones online, Templario, plantillas Bootstrap",
+        ogTitle:
+          "Templario | Plantillas HTML para Landing Pages, Tarjetas e Invitaciones",
+        ogDescription:
+          "Descarga plantillas modernas para landing pages, invitaciones de boda y tarjetas profesionales. Versiones gratis y premium disponibles. Hechas con Bootstrap.",
         twitterTitle: "Templario | Plantillas HTML con Estilo y Simplicidad",
-        twitterDescription: "Landing pages, invitaciones y tarjetas digitales. Plantillas responsivas y personalizables para desarrolladores, diseñadores y organizadores de eventos."
+        twitterDescription:
+          "Landing pages, invitaciones y tarjetas digitales. Plantillas responsivas y personalizables para desarrolladores, diseñadores y organizadores de eventos.",
       },
       en: {
-        title: "Templario | Free & Premium HTML Templates for Landing Pages, Cards & Invites",
-        description: "Templario offers modern Bootstrap-based templates for landing pages, digital business cards, and elegant invitations. Responsive, clean, and ready to customize. Download free or premium versions.",
-        keywords: "landing page templates, HTML templates, free templates, premium templates, bootstrap templates, digital invitations, business cards, wedding templates, Templario",
-        ogTitle: "Templario | HTML Templates for Landing Pages, Cards & Invites",
-        ogDescription: "Download modern templates for landing pages, wedding invites, and business cards. Free and premium versions available. Powered by Bootstrap, easy to edit.",
+        title:
+          "Templario | Free & Premium HTML Templates for Landing Pages, Cards & Invites",
+        description:
+          "Templario offers modern Bootstrap-based templates for landing pages, digital business cards, and elegant invitations. Responsive, clean, and ready to customize. Download free or premium versions.",
+        keywords:
+          "landing page templates, HTML templates, free templates, premium templates, bootstrap templates, digital invitations, business cards, wedding templates, Templario",
+        ogTitle:
+          "Templario | HTML Templates for Landing Pages, Cards & Invites",
+        ogDescription:
+          "Download modern templates for landing pages, wedding invites, and business cards. Free and premium versions available. Powered by Bootstrap, easy to edit.",
         twitterTitle: "Templario | HTML Templates with Style and Simplicity",
-        twitterDescription: "Landing pages, invitations, and digital business card templates. Responsive and customizable for developers, designers, and event planners."
-      }
+        twitterDescription:
+          "Landing pages, invitations, and digital business card templates. Responsive and customizable for developers, designers, and event planners.",
+      },
     };
 
     function updateMeta(lang) {
       document.title = metaLangContent[lang].title;
-      document.getElementById('metaDescription').setAttribute('content', metaLangContent[lang].description);
-      document.getElementById('metaKeywords').setAttribute('content', metaLangContent[lang].keywords);
-      document.getElementById('ogTitle').setAttribute('content', metaLangContent[lang].ogTitle);
-      document.getElementById('ogDescription').setAttribute('content', metaLangContent[lang].ogDescription);
-      document.getElementById('twitterTitle').setAttribute('content', metaLangContent[lang].twitterTitle);
-      document.getElementById('twitterDescription').setAttribute('content', metaLangContent[lang].twitterDescription);
+      document
+        .getElementById("metaDescription")
+        .setAttribute("content", metaLangContent[lang].description);
+      document
+        .getElementById("metaKeywords")
+        .setAttribute("content", metaLangContent[lang].keywords);
+      document
+        .getElementById("ogTitle")
+        .setAttribute("content", metaLangContent[lang].ogTitle);
+      document
+        .getElementById("ogDescription")
+        .setAttribute("content", metaLangContent[lang].ogDescription);
+      document
+        .getElementById("twitterTitle")
+        .setAttribute("content", metaLangContent[lang].twitterTitle);
+      document
+        .getElementById("twitterDescription")
+        .setAttribute("content", metaLangContent[lang].twitterDescription);
     }
   </script>
-
 </head>
+
 <body>
-
-<!-- Botón de idioma -->
-<div style="position: fixed; top: 15px; right: 15px; z-index: 1000; background-color: rgba(255,255,255,0.85); border-radius: 6px; padding: 6px;">
-  <button id="langToggle" class="btn btn-sm btn-dark">🌐 English</button>
-</div>
-
-
-<!-- HERO -->
-<section class="hero position-relative vh-100 overflow-hidden">
-  <!-- Video de fondo -->
-  <video autoplay muted loop playsinline class="w-100 h-100 object-fit-cover position-absolute top-0 start-0">
-    <source src="/assets/14665427-hd_1920_1080_60fps.mp4" type="video/mp4" />
-    Tu navegador no soporta video HTML5.
-  </video>
-  
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%); z-index:1;"></div>
-
-  <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white position-relative" style="z-index:2;">
-    <h2 class="fw-bold mb-3 lang" data-es="TEMPLARIO" data-en="TEMPLARIO">TEMPLARIO</h2>
-    <h1 class="display-3 fw-bold mb-3 lang" data-es="Plantillas para tarjetas digitales, invitaciones y landing pages" data-en="Templates for digital business cards, invitations & landing pages">
-      Plantillas para tarjetas digitales, invitaciones y landing pages
-    </h1>
-    <p class="lead mb-4 lang" data-es="Diseños listos para usar con código limpio y editable" data-en="Ready-to-use designs with clean, customizable code">
-      Diseños listos para usar con código limpio y editable
-    </p>
-    <a href="#products" class="btn btn-lg btn-primary px-5 py-3 animated-button lang" data-es="Explorar plantillas" data-en="Explore templates">Explorar plantillas</a>
+  <!-- Botón de idioma -->
+  <div style="
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1000;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 6px;
+        padding: 6px;
+      ">
+    <button id="langToggle" class="btn btn-sm btn-dark">🌐 English</button>
   </div>
-</section>
 
+  <!-- HERO -->
+  <section class="hero position-relative vh-100 overflow-hidden">
+    <!-- Video de fondo -->
+    <video autoplay muted loop playsinline class="w-100 h-100 object-fit-cover position-absolute top-0 start-0">
+      <source src="/assets/14665427-hd_1920_1080_60fps.mp4" type="video/mp4" />
+      Tu navegador no soporta video HTML5.
+    </video>
 
-<section id="products" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-5 lang" data-es="Plantillas Destacadas" data-en="Featured Templates">Featured Templates</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="product-card text-center">
-          <img src="/assets/preview.png" class="img-fluid rounded mb-3" alt="Interpreter Portfolio Preview">
-          <h5 class="lang" data-es="Portafolio de Intérprete" data-en="Interpreter Portfolio">Interpreter Portfolio</h5>
-          <p class="lang" data-es="Portafolio limpio y moderno para intérpretes, incluye CV editable." data-en="Clean and modern portfolio for interpreters, includes editable CV.">Clean and modern portfolio for interpreters, includes editable CV.</p>
-          <a href="https://interpreterportfolio.netlify.app" target="_blank" class="btn btn-outline-secondary btn-sm lang" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
-          <a href="https://clentebank.gumroad.com/l/xmqsc" target="_blank" class="btn btn-primary btn-sm lang" data-es="Comprar por $5" data-en="Buy for $5">Buy for $5</a>
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="
+          background: radial-gradient(
+            circle,
+            rgba(0, 0, 0, 0.2) 0%,
+            rgba(0, 0, 0, 0.6) 100%
+          );
+          z-index: 1;
+        "></div>
+
+    <div
+      class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white position-relative"
+      style="z-index: 2">
+      <h2 class="fw-bold mb-3 lang" data-es="TEMPLARIO" data-en="TEMPLARIO">
+        TEMPLARIO
+      </h2>
+      <h1 class="display-3 fw-bold mb-3 lang" data-es="Plantillas para tarjetas digitales, invitaciones y landing pages"
+        data-en="Templates for digital business cards, invitations & landing pages">
+        Plantillas para tarjetas digitales, invitaciones y landing pages
+      </h1>
+      <p class="lead mb-4 lang" data-es="Diseños listos para usar con código limpio y editable"
+        data-en="Ready-to-use designs with clean, customizable code">
+        Diseños listos para usar con código limpio y editable
+      </p>
+      <a href="#products" class="btn btn-lg btn-primary px-5 py-3 animated-button lang" data-es="Explorar plantillas"
+        data-en="Explore templates">Explorar plantillas</a>
+    </div>
+  </section>
+
+  <section id="products" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5 lang" data-es="Plantillas Destacadas" data-en="Featured Templates">
+        Featured Templates
+      </h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="product-card text-center">
+            <img src="/assets/preview.png" class="img-fluid rounded mb-3" alt="Interpreter Portfolio Preview" />
+            <h5 class="lang" data-es="Portafolio de Intérprete" data-en="Interpreter Portfolio">
+              Interpreter Portfolio
+            </h5>
+            <p class="lang" data-es="Portafolio limpio y moderno para intérpretes, incluye CV editable."
+              data-en="Clean and modern portfolio for interpreters, includes editable CV.">
+              Clean and modern portfolio for interpreters, includes editable
+              CV.
+            </p>
+            <a href="https://interpreterportfolio.netlify.app" target="_blank"
+              class="btn btn-outline-secondary btn-sm lang" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
+            <a href="https://clentebank.gumroad.com/l/xmqsc" target="_blank" class="btn btn-primary btn-sm lang"
+              data-es="Comprar por $5" data-en="Buy for $5">Buy for $5</a>
+          </div>
         </div>
-        
-      </div>
+        <div class="col-md-4">
+          <div class="product-card text-center border rounded p-3 shadow-sm bg-white">
+            <img src="/assets/menu.png" class="img-fluid rounded mb-3" alt="Interactive QR Menu Preview" />
+            <h5 class="lang" data-es="Menú QR Interactivo" data-en="Interactive QR Menu">
+              Interactive QR Menu
+            </h5>
+            <p class="lang"
+              data-es="Plantilla moderna y responsive para restaurantes, perfecta para menús sin contacto con código QR."
+              data-en="Modern and responsive template for restaurants, perfect for contactless QR code menus.">
+              Modern and responsive template for restaurants, perfect for
+              contactless QR code menus.
+            </p>
+            <a href="https://interactive-qr-menu.netlify.app" target="_blank"
+              class="btn btn-outline-secondary btn-sm lang" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
+            <a href="https://clentebank.gumroad.com/l/fcihy" target="_blank" class="btn btn-primary btn-sm lang"
+              data-es="Comprar por $5" data-en="Buy for $5">Buy for $5</a>
+          </div>
+        </div>
+
         <div class="col-md-4">
   <div class="product-card text-center border rounded p-3 shadow-sm bg-white">
-    <img src="/assets/menu.png" class="img-fluid rounded mb-3" alt="Interactive QR Menu Preview">
-    <h5 class="lang" data-es="Menú QR Interactivo" data-en="Interactive QR Menu">Interactive QR Menu</h5>
-    <p class="lang" data-es="Plantilla moderna y responsive para restaurantes, perfecta para menús sin contacto con código QR." data-en="Modern and responsive template for restaurants, perfect for contactless QR code menus.">Modern and responsive template for restaurants, perfect for contactless QR code menus.</p>
-    <a href="https://interactive-qr-menu.netlify.app" target="_blank" class="btn btn-outline-secondary btn-sm lang" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
-    <a href="https://clentebank.gumroad.com/l/fcihy" target="_blank" class="btn btn-primary btn-sm lang" data-es="Comprar por $5" data-en="Buy for $5">Buy for $5</a>
+    <img src="/assets/course.png" class="img-fluid rounded mb-3" alt="Course Landing Page Template Preview" />
+    <h5 class="lang" data-es="Plantilla de Curso Online" data-en="Course Landing Page Template">
+      Course Landing Page Template
+    </h5>
+    <p class="lang"
+      data-es="Página de aterrizaje moderna y adaptable para promocionar cursos, talleres o programas de coaching."
+      data-en="Modern, responsive landing page to promote online courses, workshops, or coaching programs.">
+      Modern, responsive landing page to promote online courses, workshops, or coaching programs.
+    </p>
+    <a href="https://course-template-templario.netlify.app" target="_blank"
+      class="btn btn-outline-secondary btn-sm lang" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
+    <a href="https://clentebank.gumroad.com/l/pvkoih" target="_blank" class="btn btn-primary btn-sm lang"
+      data-es="Comprar por $5" data-en="Buy for $5">Buy for $5</a>
   </div>
 </div>
 
-      <div class="col-md-4">
-        <div class="product-card text-center">
-          <img src="/assets/preview.png" class="img-fluid rounded mb-3" alt="Interpreter Portfolio Preview">
-          <h5 class="lang" data-es="Portafolio de Intérprete" data-en="Interpreter Portfolio">Interpreter Portfolio</h5>
-          <p class="lang" data-es="Portafolio limpio y moderno para intérpretes, incluye CV editable." data-en="Clean and modern portfolio for interpreters, includes editable CV.">Clean and modern portfolio for interpreters, includes editable CV.</p>
-          <a href="https://interpreterportfolio.netlify.app" target="_blank" class="btn btn-outline-secondary btn-sm lang" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
-          <a href="https://clentebank.gumroad.com/l/xmqsc" target="_blank" class="btn btn-primary btn-sm lang" data-es="Comprar por $5" data-en="Buy for $5">Buy for $5</a>
-        </div>
-        
-      </div>
-    </div>
-    
-    <div class="text-center mt-4">
-      <a href="/coming-soon.html" class="btn btn-outline-dark lang" data-es="Ver Todas las Plantillas" data-en="View All Templates">View All Templates</a>
-    </div>
-  </div>
-</section>
 
-<section class="py-5 bg-white">
-  <div class="container">
-    <h2 class="text-center mb-5 lang" data-es="Tarjetas Digitales" data-en="Digital Business Cards">Digital Business Cards</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="product-card text-center">
-          <img src="/assets/business-card.png" class="img-fluid rounded mb-3" alt="Business Card Preview">
-          <h5 class="lang" data-es="Tarjeta Freelancer" data-en="Freelancer Card">Freelancer Card</h5>
-          <p class="lang" data-es="Plantilla moderna y responsiva para tarjetas digitales de freelancers y profesionales." data-en="Modern, responsive digital card template for freelancers and pros.">Modern, responsive digital card template for freelancers and pros.</p>
-          <a href="https://clentbusinesscard.netlify.app/" class="btn btn-outline-secondary btn-sm lang" target="_blank" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
-          <a href="https://clentebank.gumroad.com/l/ivrhe" class="btn btn-primary btn-sm lang" target="_blank" data-es="Comprar por $5" data-en="Buy Now">Buy Now $5</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="product-card text-center">
-          <img src="/assets/business-card.png" class="img-fluid rounded mb-3" alt="Business Card Preview">
-          <h5 class="lang" data-es="Tarjeta Freelancer" data-en="Freelancer Card">Freelancer Card</h5>
-          <p class="lang" data-es="Plantilla moderna y responsiva para tarjetas digitales de freelancers y profesionales." data-en="Modern, responsive digital card template for freelancers and pros.">Modern, responsive digital card template for freelancers and pros.</p>
-          <a href="https://clentbusinesscard.netlify.app/" class="btn btn-outline-secondary btn-sm lang" target="_blank" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
-          <a href="https://clentebank.gumroad.com/l/ivrhe" class="btn btn-primary btn-sm lang" target="_blank" data-es="Comprar por $5" data-en="Buy Now">Buy Now $5</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="product-card text-center">
-          <img src="/assets/business-card.png" class="img-fluid rounded mb-3" alt="Business Card Preview">
-          <h5 class="lang" data-es="Tarjeta Freelancer" data-en="Freelancer Card">Freelancer Card</h5>
-          <p class="lang" data-es="Plantilla moderna y responsiva para tarjetas digitales de freelancers y profesionales." data-en="Modern, responsive digital card template for freelancers and pros.">Modern, responsive digital card template for freelancers and pros.</p>
-          <a href="https://clentbusinesscard.netlify.app/" class="btn btn-outline-secondary btn-sm lang" target="_blank" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
-          <a href="https://clentebank.gumroad.com/l/ivrhe" class="btn btn-primary btn-sm lang" target="_blank" data-es="Comprar por $5" data-en="Buy Now">Buy Now $5</a>
-        </div>
-      </div>
-    </div>
-    <div class="text-center mt-4">
-      <a href="/coming-soon.html" class="btn btn-outline-dark lang" data-es="Explorar Más Tarjetas" data-en="Explore More Business Cards">Explore More Business Cards</a>
-    </div>
-  </div>
-</section>
 
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-5 lang" data-es="Invitaciones Digitales" data-en="Digital Invitations">Digital Invitations</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="product-card text-center">
-          <img src="/assets/cover.png" class="img-fluid rounded mb-3" alt="Invitation Preview">
-          <h5 class="lang" data-es="Invitación de Boda" data-en="Wedding Invite">Wedding Invite</h5>
-          <p class="lang" data-es="Plantilla elegante y compartible para invitaciones de boda en línea." data-en="Elegant and shareable online wedding invitation template.">Elegant and shareable online wedding invitation template.</p>
-          <a href="https://wweddinginvitation.netlify.app/" class="btn btn-outline-secondary btn-sm lang" target="_blank" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
-          <a href="https://clentebank.gumroad.com/l/zmbpur" class="btn btn-primary btn-sm lang" target="_blank" data-es="Comprar por $5" data-en="Buy Now">Buy Now $5</a>
-        </div>
       </div>
-      <div class="col-md-4">
-        <div class="product-card text-center">
-          <img src="/assets/cover.png" class="img-fluid rounded mb-3" alt="Invitation Preview">
-          <h5 class="lang" data-es="Invitación de Boda" data-en="Wedding Invite">Wedding Invite</h5>
-          <p class="lang" data-es="Plantilla elegante y compartible para invitaciones de boda en línea." data-en="Elegant and shareable online wedding invitation template.">Elegant and shareable online wedding invitation template.</p>
-          <a href="https://wweddinginvitation.netlify.app/" class="btn btn-outline-secondary btn-sm lang" target="_blank" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
-          <a href="https://clentebank.gumroad.com/l/zmbpur" class="btn btn-primary btn-sm lang" target="_blank" data-es="Comprar por $5" data-en="Buy Now">Buy Now $5</a>
+
+      <div class="text-center mt-4">
+        <a href="/coming-soon.html" class="btn btn-outline-dark lang" data-es="Ver Todas las Plantillas"
+          data-en="View All Templates">View All Templates</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-5 lang" data-es="Tarjetas Digitales" data-en="Digital Business Cards">
+        Digital Business Cards
+      </h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="product-card text-center">
+            <img src="/assets/business-card.png" class="img-fluid rounded mb-3" alt="Business Card Preview" />
+            <h5 class="lang" data-es="Tarjeta Freelancer" data-en="Freelancer Card">
+              Freelancer Card
+            </h5>
+            <p class="lang"
+              data-es="Plantilla moderna y responsiva para tarjetas digitales de freelancers y profesionales."
+              data-en="Modern, responsive digital card template for freelancers and pros.">
+              Modern, responsive digital card template for freelancers and
+              pros.
+            </p>
+            <a href="https://clentbusinesscard.netlify.app/" class="btn btn-outline-secondary btn-sm lang"
+              target="_blank" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
+            <a href="https://clentebank.gumroad.com/l/ivrhe" class="btn btn-primary btn-sm lang" target="_blank"
+              data-es="Comprar por $5" data-en="Buy Now">Buy Now $5</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-card text-center">
+            <img src="/assets/business-card.png" class="img-fluid rounded mb-3" alt="Business Card Preview" />
+            <h5 class="lang" data-es="Tarjeta Freelancer" data-en="Freelancer Card">
+              Freelancer Card
+            </h5>
+            <p class="lang"
+              data-es="Plantilla moderna y responsiva para tarjetas digitales de freelancers y profesionales."
+              data-en="Modern, responsive digital card template for freelancers and pros.">
+              Modern, responsive digital card template for freelancers and
+              pros.
+            </p>
+            <a href="https://clentbusinesscard.netlify.app/" class="btn btn-outline-secondary btn-sm lang"
+              target="_blank" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
+            <a href="https://clentebank.gumroad.com/l/ivrhe" class="btn btn-primary btn-sm lang" target="_blank"
+              data-es="Comprar por $5" data-en="Buy Now">Buy Now $5</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-card text-center">
+            <img src="/assets/business-card.png" class="img-fluid rounded mb-3" alt="Business Card Preview" />
+            <h5 class="lang" data-es="Tarjeta Freelancer" data-en="Freelancer Card">
+              Freelancer Card
+            </h5>
+            <p class="lang"
+              data-es="Plantilla moderna y responsiva para tarjetas digitales de freelancers y profesionales."
+              data-en="Modern, responsive digital card template for freelancers and pros.">
+              Modern, responsive digital card template for freelancers and
+              pros.
+            </p>
+            <a href="https://clentbusinesscard.netlify.app/" class="btn btn-outline-secondary btn-sm lang"
+              target="_blank" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
+            <a href="https://clentebank.gumroad.com/l/ivrhe" class="btn btn-primary btn-sm lang" target="_blank"
+              data-es="Comprar por $5" data-en="Buy Now">Buy Now $5</a>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="product-card text-center">
-          <img src="/assets/cover.png" class="img-fluid rounded mb-3" alt="Invitation Preview">
-          <h5 class="lang" data-es="Invitación de Boda" data-en="Wedding Invite">Wedding Invite</h5>
-          <p class="lang" data-es="Plantilla elegante y compartible para invitaciones de boda en línea." data-en="Elegant and shareable online wedding invitation template.">Elegant and shareable online wedding invitation template.</p>
-          <a href="https://wweddinginvitation.netlify.app/" class="btn btn-outline-secondary btn-sm lang" target="_blank" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
-          <a href="https://clentebank.gumroad.com/l/zmbpur" class="btn btn-primary btn-sm lang" target="_blank" data-es="Comprar por $5" data-en="Buy Now">Buy Now $5</a>
+      <div class="text-center mt-4">
+        <a href="/coming-soon.html" class="btn btn-outline-dark lang" data-es="Explorar Más Tarjetas"
+          data-en="Explore More Business Cards">Explore More Business Cards</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5 lang" data-es="Invitaciones Digitales" data-en="Digital Invitations">
+        Digital Invitations
+      </h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="product-card text-center">
+            <img src="/assets/cover.png" class="img-fluid rounded mb-3" alt="Invitation Preview" />
+            <h5 class="lang" data-es="Invitación de Boda" data-en="Wedding Invite">
+              Wedding Invite
+            </h5>
+            <p class="lang" data-es="Plantilla elegante y compartible para invitaciones de boda en línea."
+              data-en="Elegant and shareable online wedding invitation template.">
+              Elegant and shareable online wedding invitation template.
+            </p>
+            <a href="https://wweddinginvitation.netlify.app/" class="btn btn-outline-secondary btn-sm lang"
+              target="_blank" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
+            <a href="https://clentebank.gumroad.com/l/zmbpur" class="btn btn-primary btn-sm lang" target="_blank"
+              data-es="Comprar por $5" data-en="Buy Now">Buy Now $5</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-card text-center">
+            <img src="/assets/cover.png" class="img-fluid rounded mb-3" alt="Invitation Preview" />
+            <h5 class="lang" data-es="Invitación de Boda" data-en="Wedding Invite">
+              Wedding Invite
+            </h5>
+            <p class="lang" data-es="Plantilla elegante y compartible para invitaciones de boda en línea."
+              data-en="Elegant and shareable online wedding invitation template.">
+              Elegant and shareable online wedding invitation template.
+            </p>
+            <a href="https://wweddinginvitation.netlify.app/" class="btn btn-outline-secondary btn-sm lang"
+              target="_blank" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
+            <a href="https://clentebank.gumroad.com/l/zmbpur" class="btn btn-primary btn-sm lang" target="_blank"
+              data-es="Comprar por $5" data-en="Buy Now">Buy Now $5</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-card text-center">
+            <img src="/assets/cover.png" class="img-fluid rounded mb-3" alt="Invitation Preview" />
+            <h5 class="lang" data-es="Invitación de Boda" data-en="Wedding Invite">
+              Wedding Invite
+            </h5>
+            <p class="lang" data-es="Plantilla elegante y compartible para invitaciones de boda en línea."
+              data-en="Elegant and shareable online wedding invitation template.">
+              Elegant and shareable online wedding invitation template.
+            </p>
+            <a href="https://wweddinginvitation.netlify.app/" class="btn btn-outline-secondary btn-sm lang"
+              target="_blank" data-es="Demo en Vivo" data-en="Live Demo">Live Demo</a>
+            <a href="https://clentebank.gumroad.com/l/zmbpur" class="btn btn-primary btn-sm lang" target="_blank"
+              data-es="Comprar por $5" data-en="Buy Now">Buy Now $5</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="/coming-soon.html" class="btn btn-outline-dark lang" data-es="Ver Todas las Invitaciones"
+          data-en="Browse All Invitations">Browse All Invitations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="py-5 bg-white" id="how-it-works">
+    <div class="container">
+      <h2 class="text-center mb-5 lang" data-es="¿Cómo Funciona?" data-en="How It Works">
+        ¿Cómo Funciona?
+      </h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+          <i class="fas fa-search fa-3x mb-3 text-primary"></i>
+          <h5 class="lang" data-es="1. Explora" data-en="1. Explore">
+            1. Explora
+          </h5>
+          <p class="lang" data-es="Descubre nuestra galería de plantillas adaptadas a tu necesidad."
+            data-en="Browse our template gallery tailored to your needs.">
+            Descubre nuestra galería de plantillas adaptadas a tu necesidad.
+          </p>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-pencil-ruler fa-3x mb-3 text-success"></i>
+          <h5 class="lang" data-es="2. Personaliza" data-en="2. Customize">
+            2. Personaliza
+          </h5>
+          <p class="lang" data-es="Edita el código fácilmente o usa nuestras herramientas visuales."
+            data-en="Easily edit the code or use our visual tools.">
+            Edita el código fácilmente o usa nuestras herramientas visuales.
+          </p>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-rocket fa-3x mb-3 text-danger"></i>
+          <h5 class="lang" data-es="3. Publica" data-en="3. Launch">
+            3. Publica
+          </h5>
+          <p class="lang" data-es="Sube tu plantilla a la web y compártela al instante."
+            data-en="Upload your template and share it instantly.">
+            Sube tu plantilla a la web y compártela al instante.
+          </p>
         </div>
       </div>
     </div>
-    <div class="text-center mt-4">
-      <a href="/coming-soon.html" class="btn btn-outline-dark lang" data-es="Ver Todas las Invitaciones" data-en="Browse All Invitations">Browse All Invitations</a>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contacto" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-4 lang" data-es="Contacto" data-en="Contact">
+        Contacto
+      </h2>
+      <form id="contactForm" action="https://formspree.io/f/xrbkrwbg" method="POST" class="mx-auto"
+        style="max-width: 600px">
+        <!-- Honeypot -->
+        <input type="text" name="_gotcha" style="display: none" />
+
+        <div class="mb-3">
+          <label for="name" class="form-label lang" data-es="Nombre" data-en="Name">Nombre</label>
+          <input type="text" class="form-control" id="name" name="name" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label lang" data-es="Correo Electrónico" data-en="Email">Correo
+            Electrónico</label>
+          <input type="email" class="form-control" id="email" name="email" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="message" class="form-label lang" data-es="Mensaje" data-en="Message">Mensaje</label>
+          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <!-- Google reCAPTCHA -->
+        <div class="g-recaptcha mb-3" data-sitekey="6LdoYnErAAAAAAPiRjsGYnsJH3R6Hl7EV4k7gtl0"></div>
+
+        <button type="submit" class="btn btn-primary w-100 lang" data-es="Enviar Mensaje" data-en="Send Message">
+          Enviar Mensaje
+        </button>
+      </form>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Full HTML with 'How it Works' and 'Contact' sections included -->
-<!-- ... [Tu head y secciones existentes] ... -->
+  <!--boton volver arriba-->
+  <button id="btnScrollTop" title="Volver arriba" style="
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        display: none;
+        background-color: var(--digital-blue);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1000;
+      ">
+    ↑
+  </button>
 
-<!-- How It Works Section -->
-<section class="py-5 bg-white" id="how-it-works">
-  <div class="container">
-    <h2 class="text-center mb-5 lang" data-es="¿Cómo Funciona?" data-en="How It Works">¿Cómo Funciona?</h2>
-    <div class="row text-center">
-      <div class="col-md-4 mb-4" data-aos="fade-up">
-        <i class="fas fa-search fa-3x mb-3 text-primary"></i>
-        <h5 class="lang" data-es="1. Explora" data-en="1. Explore">1. Explora</h5>
-        <p class="lang" data-es="Descubre nuestra galería de plantillas adaptadas a tu necesidad." data-en="Browse our template gallery tailored to your needs.">Descubre nuestra galería de plantillas adaptadas a tu necesidad.</p>
-      </div>
-      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-pencil-ruler fa-3x mb-3 text-success"></i>
-        <h5 class="lang" data-es="2. Personaliza" data-en="2. Customize">2. Personaliza</h5>
-        <p class="lang" data-es="Edita el código fácilmente o usa nuestras herramientas visuales." data-en="Easily edit the code or use our visual tools.">Edita el código fácilmente o usa nuestras herramientas visuales.</p>
-      </div>
-      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-rocket fa-3x mb-3 text-danger"></i>
-        <h5 class="lang" data-es="3. Publica" data-en="3. Launch">3. Publica</h5>
-        <p class="lang" data-es="Sube tu plantilla a la web y compártela al instante." data-en="Upload your template and share it instantly.">Sube tu plantilla a la web y compártela al instante.</p>
+  <!-- Footer -->
+
+  <footer class="py-4 text-center bg-dark text-white">
+    <div class="container">
+      <p class="lang" data-es="Templario © 2025. Todos los derechos reservados."
+        data-en="Templario &copy; 2025. All rights reserved.">
+        Templario &copy; 2025. All rights reserved.
+      </p>
+      <div>
+        <a href="#" class="text-white mx-2 lang" data-es="Instagram" data-en="Instagram">Instagram</a>
+        <a href="#" class="text-white mx-2 lang" data-es="Twitter" data-en="Twitter">Twitter</a>
+        <a href="#contacto" class="text-white mx-2 lang" data-es="Contacto" data-en="Contact">Contact</a>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- Contact Section -->
-<section id="contacto" class="py-5 bg-white">
-  <div class="container">
-    <h2 class="text-center mb-4 lang" data-es="Contacto" data-en="Contact">Contacto</h2>
-    <form id="contactForm" action="https://formspree.io/f/xrbkrwbg" method="POST" class="mx-auto" style="max-width: 600px;">
-      
-      <!-- Honeypot -->
-      <input type="text" name="_gotcha" style="display:none">
+  <script>
+    const langToggle = document.getElementById("langToggle");
+    const langElements = document.querySelectorAll(".lang");
+    let currentLang = "es";
 
-      <div class="mb-3">
-        <label for="name" class="form-label lang" data-es="Nombre" data-en="Name">Nombre</label>
-        <input type="text" class="form-control" id="name" name="name" required>
-      </div>
+    langToggle.addEventListener("click", () => {
+      currentLang = currentLang === "es" ? "en" : "es";
+      langToggle.textContent =
+        currentLang === "es" ? "🌐 English" : "🌐 Español";
+      langElements.forEach((el) => {
+        const text = el.getAttribute(`data-${currentLang}`);
+        if (text) el.textContent = text;
+      });
+      document.documentElement.lang = currentLang;
+      updateMeta(currentLang); // ✅ Update meta tags when toggling
+    });
 
-      <div class="mb-3">
-        <label for="email" class="form-label lang" data-es="Correo Electrónico" data-en="Email">Correo Electrónico</label>
-        <input type="email" class="form-control" id="email" name="email" required>
-      </div>
+    // ✅ Update meta tags (title, description, og:title, etc.)
+    function updateMeta(lang) {
+      const metaData = {
+        es: {
+          title:
+            "Templario | Plantillas HTML Gratis y Premium para Landings, Tarjetas e Invitaciones",
+          description:
+            "Templario ofrece plantillas modernas en Bootstrap para landing pages, tarjetas digitales e invitaciones elegantes. Responsivas, limpias y listas para personalizar.",
+          keywords:
+            "plantillas html, plantillas gratis, invitaciones digitales, tarjetas de presentación, Templario, plantillas premium",
+          ogTitle: "Templario | Plantillas HTML Profesionales",
+          ogDescription:
+            "Descarga plantillas modernas para landings, bodas y tarjetas profesionales. Gratis y premium.",
+          twitterTitle: "Templario | Plantillas HTML Responsivas",
+          twitterDescription:
+            "Invitaciones digitales, landings y tarjetas modernas. Código limpio y personalizable.",
+        },
+        en: {
+          title:
+            "Templario | Free & Premium HTML Templates for Landing Pages, Cards & Invites",
+          description:
+            "Templario offers modern Bootstrap-based templates for landing pages, digital business cards, and elegant invitations. Responsive, clean, and ready to customize.",
+          keywords:
+            "landing page templates, HTML templates, free templates, premium templates, bootstrap templates, digital invitations, business cards, wedding templates, Templario",
+          ogTitle:
+            "Templario | HTML Templates for Landing Pages, Cards & Invites",
+          ogDescription:
+            "Download modern templates for landing pages, wedding invites, and business cards. Free and premium versions available. Powered by Bootstrap, easy to edit.",
+          twitterTitle:
+            "Templario | HTML Templates with Style and Simplicity",
+          twitterDescription:
+            "Landing pages, invitations, and digital business card templates. Responsive and customizable for developers, designers, and event planners.",
+        },
+      };
 
-      <div class="mb-3">
-        <label for="message" class="form-label lang" data-es="Mensaje" data-en="Message">Mensaje</label>
-        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-      </div>
+      const content = metaData[lang];
 
-      <!-- Google reCAPTCHA -->
-      <div class="g-recaptcha mb-3" data-sitekey="6LdoYnErAAAAAAPiRjsGYnsJH3R6Hl7EV4k7gtl0"></div>
+      // Update <title>
+      document.title = content.title;
 
-      <button type="submit" class="btn btn-primary w-100 lang" data-es="Enviar Mensaje" data-en="Send Message">Enviar Mensaje</button>
-    </form>
-  </div>
-</section>
+      // Update meta description
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute("content", content.description);
 
-<!--boton volver arriba-->
-<button id="btnScrollTop" title="Volver arriba" 
-        style="
-          position: fixed;
-          bottom: 40px;
-          right: 40px;
-          display: none;
-          background-color: var(--digital-blue);
-          color: white;
-          border: none;
-          border-radius: 50%;
-          width: 50px;
-          height: 50px;
-          font-size: 24px;
-          cursor: pointer;
-          z-index: 1000;
-        ">
-  ↑
-</button>
+      // Update keywords
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords)
+        metaKeywords.setAttribute("content", content.keywords);
 
-<!-- Footer -->
+      // Open Graph
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute("content", content.ogTitle);
 
-<footer class="py-4 text-center bg-dark text-white">
-  <div class="container">
-    <p class="lang" data-es="Templario © 2025. Todos los derechos reservados." data-en="Templario &copy; 2025. All rights reserved.">Templario &copy; 2025. All rights reserved.</p>
-    <div>
-      <a href="#" class="text-white mx-2 lang" data-es="Instagram" data-en="Instagram">Instagram</a>
-      <a href="#" class="text-white mx-2 lang" data-es="Twitter" data-en="Twitter">Twitter</a>
-      <a href="#contacto" class="text-white mx-2 lang" data-es="Contacto" data-en="Contact">Contact</a>
-    </div>
-  </div>
-</footer>
+      const ogDescription = document.querySelector(
+        'meta[property="og:description"]'
+      );
+      if (ogDescription)
+        ogDescription.setAttribute("content", content.ogDescription);
 
-<script>
-const langToggle = document.getElementById('langToggle');
-const langElements = document.querySelectorAll('.lang');
-let currentLang = 'es';
+      // Twitter
+      const twitterTitle = document.querySelector(
+        'meta[name="twitter:title"]'
+      );
+      if (twitterTitle)
+        twitterTitle.setAttribute("content", content.twitterTitle);
 
-langToggle.addEventListener('click', () => {
-  currentLang = currentLang === 'es' ? 'en' : 'es';
-  langToggle.textContent = currentLang === 'es' ? '🌐 English' : '🌐 Español';
-  langElements.forEach(el => {
-    const text = el.getAttribute(`data-${currentLang}`);
-    if (text) el.textContent = text;
-  });
-  document.documentElement.lang = currentLang;
-  updateMeta(currentLang); // ✅ Update meta tags when toggling
-});
-
-// ✅ Update meta tags (title, description, og:title, etc.)
-function updateMeta(lang) {
-  const metaData = {
-    es: {
-      title: 'Templario | Plantillas HTML Gratis y Premium para Landings, Tarjetas e Invitaciones',
-      description: 'Templario ofrece plantillas modernas en Bootstrap para landing pages, tarjetas digitales e invitaciones elegantes. Responsivas, limpias y listas para personalizar.',
-      keywords: 'plantillas html, plantillas gratis, invitaciones digitales, tarjetas de presentación, Templario, plantillas premium',
-      ogTitle: 'Templario | Plantillas HTML Profesionales',
-      ogDescription: 'Descarga plantillas modernas para landings, bodas y tarjetas profesionales. Gratis y premium.',
-      twitterTitle: 'Templario | Plantillas HTML Responsivas',
-      twitterDescription: 'Invitaciones digitales, landings y tarjetas modernas. Código limpio y personalizable.',
-    },
-    en: {
-      title: 'Templario | Free & Premium HTML Templates for Landing Pages, Cards & Invites',
-      description: 'Templario offers modern Bootstrap-based templates for landing pages, digital business cards, and elegant invitations. Responsive, clean, and ready to customize.',
-      keywords: 'landing page templates, HTML templates, free templates, premium templates, bootstrap templates, digital invitations, business cards, wedding templates, Templario',
-      ogTitle: 'Templario | HTML Templates for Landing Pages, Cards & Invites',
-      ogDescription: 'Download modern templates for landing pages, wedding invites, and business cards. Free and premium versions available. Powered by Bootstrap, easy to edit.',
-      twitterTitle: 'Templario | HTML Templates with Style and Simplicity',
-      twitterDescription: 'Landing pages, invitations, and digital business card templates. Responsive and customizable for developers, designers, and event planners.',
+      const twitterDescription = document.querySelector(
+        'meta[name="twitter:description"]'
+      );
+      if (twitterDescription)
+        twitterDescription.setAttribute(
+          "content",
+          content.twitterDescription
+        );
     }
-  };
 
-  const content = metaData[lang];
+    // ✅ Call it on page load
+    updateMeta(currentLang);
 
-  // Update <title>
-  document.title = content.title;
+    //sw
+    const CACHE_NAME = "templario-cache-v1";
+    const urlsToCache = [
+      "/",
+      "/index.html",
+      "/manifest.json",
+      "/favicon_io/android-chrome-192x192.png",
+      "/favicon_io/android-chrome-512x512.png",
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
+      "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap",
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css",
+      "https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css",
+      // Add more assets you want to cache (CSS, JS, images) here
+    ];
 
-  // Update meta description
-  const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) metaDesc.setAttribute('content', content.description);
+    // Install event - cache files
+    self.addEventListener("install", (event) => {
+      event.waitUntil(
+        caches.open(CACHE_NAME).then((cache) => {
+          return cache.addAll(urlsToCache);
+        })
+      );
+    });
 
-  // Update keywords
-  const metaKeywords = document.querySelector('meta[name="keywords"]');
-  if (metaKeywords) metaKeywords.setAttribute('content', content.keywords);
+    // Activate event - clean old caches
+    self.addEventListener("activate", (event) => {
+      event.waitUntil(
+        caches
+          .keys()
+          .then((keys) =>
+            Promise.all(
+              keys
+                .filter((key) => key !== CACHE_NAME)
+                .map((key) => caches.delete(key))
+            )
+          )
+      );
+    });
 
-  // Open Graph
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  if (ogTitle) ogTitle.setAttribute('content', content.ogTitle);
+    // Fetch event - serve cached content when offline
+    self.addEventListener("fetch", (event) => {
+      event.respondWith(
+        caches.match(event.request).then((cachedResponse) => {
+          // Return cached response if found; otherwise fetch from network
+          return cachedResponse || fetch(event.request);
+        })
+      );
+    });
+    //Validación básica con JS
+    document
+      .getElementById("contactForm")
+      .addEventListener("submit", function (e) {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const recaptcha = grecaptcha.getResponse();
 
-  const ogDescription = document.querySelector('meta[property="og:description"]');
-  if (ogDescription) ogDescription.setAttribute('content', content.ogDescription);
+        if (!name || !email || !message || !recaptcha) {
+          e.preventDefault();
+          alert(
+            "Por favor, completa todos los campos y confirma que no eres un robot."
+          );
+        }
+      });
+    //boton volver arriba
+    const btnScrollTop = document.getElementById("btnScrollTop");
 
-  // Twitter
-  const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-  if (twitterTitle) twitterTitle.setAttribute('content', content.twitterTitle);
+    window.onscroll = function () {
+      if (
+        document.body.scrollTop > 300 ||
+        document.documentElement.scrollTop > 300
+      ) {
+        btnScrollTop.style.display = "block";
+      } else {
+        btnScrollTop.style.display = "none";
+      }
+    };
 
-  const twitterDescription = document.querySelector('meta[name="twitter:description"]');
-  if (twitterDescription) twitterDescription.setAttribute('content', content.twitterDescription);
-}
-
-// ✅ Call it on page load
-updateMeta(currentLang);
-
-//sw
-const CACHE_NAME = 'templario-cache-v1';
-const urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/favicon_io/android-chrome-192x192.png',
-  '/favicon_io/android-chrome-512x512.png',
-  'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
-  'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap',
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
-  'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css'
-  // Add more assets you want to cache (CSS, JS, images) here
-];
-
-// Install event - cache files
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(urlsToCache);
-    })
-  );
-});
-
-// Activate event - clean old caches
-self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(
-        keys.filter(key => key !== CACHE_NAME)
-          .map(key => caches.delete(key))
-      )
-    )
-  );
-});
-
-// Fetch event - serve cached content when offline
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request).then(cachedResponse => {
-      // Return cached response if found; otherwise fetch from network
-      return cachedResponse || fetch(event.request);
-    })
-  );
-});
-//Validación básica con JS
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-  const recaptcha = grecaptcha.getResponse();
-
-  if (!name || !email || !message || !recaptcha) {
-    e.preventDefault();
-    alert('Por favor, completa todos los campos y confirma que no eres un robot.');
-  }
-});
-//boton volver arriba
-const btnScrollTop = document.getElementById('btnScrollTop');
-
-  window.onscroll = function() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      btnScrollTop.style.display = "block";
-    } else {
-      btnScrollTop.style.display = "none";
-    }
-  };
-
-  btnScrollTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init();</script>
-<!-- Google reCAPTCHA -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    btnScrollTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- Google reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
+
 </html>
